@@ -1,11 +1,10 @@
-import sqlite3
 from flask import Flask, request, session, g, redirect, url_for, abort, render_template, flash
 import flickr
 from random import random
 
 
-DATABASE = 'colleck.db'
-DEBUG = True
+# DATABASE = 'colleck.db'
+# DEBUG = True
 SECRET_KEY = 'development key'
 # USERNAME = 'admin'
 # PASSWORD = 'default'
@@ -16,7 +15,7 @@ app.config.from_object(__name__)
 
 @app.route('/')
 def initial():
-	flash('test')
+	# flash('test')
 	return render_template('initial.html')
 
 @app.route('/result',methods=['GET','POST'])
