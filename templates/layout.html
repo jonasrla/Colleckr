@@ -1,0 +1,15 @@
+<!doctype html>
+<title>Colleck</title>
+<link rel='stylesheet' type='text/css' href='{{url_for('static',filename='bootstrap/css/bootstrap.min.css')}}'/>
+<link rel='stylesheet' type='text/css' href='{{url_for('static',filename='bootstrap/css/bootstrap-theme.min.css')}}'/>
+<link rel='stylesheet' type='text/css' href='{{url_for('static',filename='style.css')}}'/>
+<div class='page'>
+	<h1>Colleck</h1>
+	{% for message in get_flashed_messages() %}
+		<div class="alert alert-warning alert-dismissible" role="alert">
+  <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+  {{message}}
+</div>
+	{% endfor %}
+	{% block body %}{% endblock %}
+</div>

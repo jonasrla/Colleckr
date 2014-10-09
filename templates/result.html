@@ -1,0 +1,16 @@
+{%extends 'layout.html' %}
+{% block body %}
+	<form action="{{url_for('show_results')}}" method="POST" class="add-entry">
+		<dl>
+			<dd><input type='text' placeholder='What are you looking for?' class='form-control' size=40 name='search'required autofocus>
+			<dd><button type='submit' class='btn btn-sm btn-default'>search!</button>
+		</dl>
+	</form>
+	<ul class='photo'>
+	{% if photo %}
+		<img src="{{photo}}" class="img-responsive" alt="Responsive image">
+	{% else %}
+		<li><em>Sorry, no photos were found</em>
+	{% endif %}
+	</ul>
+{% endblock %}

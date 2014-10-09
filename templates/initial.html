@@ -1,0 +1,11 @@
+{%extends 'layout.html' %}
+{% block body %}
+	<div class='form'>
+		<form action="{{url_for('show_results')}}" method="POST" class="add-entry">
+			<dl>
+				<dd><input type='text' placeholder='What are you looking for?' class='form-control' size=40 name='search' required autofocus>
+				<dd><button type='submit' class='btn btn-lg btn-default'>search!</button>
+			</dl>
+		</form>
+	</div>
+{% endblock %}
